@@ -2,6 +2,12 @@
 <html lang="en-US">
 <head>
 <script>
+if (window.location.hostname.startsWith("www.")) {
+  var newUrl = window.location.protocol + "//" + window.location.hostname.slice(4) + window.location.pathname;
+  window.location.replace(newUrl);
+}
+</script>
+<script>
 if (window.location.href === "http://www.apk.bz") {
   window.location.replace("https://apk.bz");
 }
