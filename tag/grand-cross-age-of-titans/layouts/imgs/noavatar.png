@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Redirecting...</title>
-		<meta http-equiv="refresh" content="0;url=/grand-cross-age-of-titans/">
+		<meta http-equiv="refresh" content="0;url=/">
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location = "/grand-cross-age-of-titans/";
+			window.location = "/";
 		</script>
 
-		<p>You are being redirected to <a href="/grand-cross-age-of-titans/">/grand-cross-age-of-titans/</a></p>
+		<p>You are being redirected to <a href="/">/</a></p>
 	</body>
 </html>
