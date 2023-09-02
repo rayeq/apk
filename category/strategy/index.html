@@ -67,7 +67,7 @@
         img.loading = "eager";
     });
 });</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
 <div id="page" class=" site">
@@ -301,5 +301,21 @@ var rmp_frontend = {"admin_ajax":"\/wp-admin\/admin-ajax.php","postID":"39","noV
 <script type="text/javascript" defer src="/wp-content/themes/Moddroid/moddroid/js/custom.js" id="custom-script-js"></script>
  
 </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      axios.get('https://apk.bz/category') // ضع العنوان الجديد هنا
+        .then(function (response) {
+          const post = response.data;
+
+          document.getElementById('error-message').style.display = 'none';
+          document.getElementById('post-title').textContent = post.title;
+          document.getElementById('post-category').textContent = post.category;
+          document.getElementById('post-link').href = post.url;
+        })
+        .catch(function (error) {
+          window.location.href = 'https://apk.bz/'; // توجيه إلى الصفحة الرئيسية
+        });
+    });
+  </script>
 </body>
 </html>
