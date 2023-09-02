@@ -616,23 +616,19 @@ var rmp_frontend = {"admin_ajax":"\/wp-admin\/admin-ajax.php","postID":"39","noV
 <script type="text/javascript" defer src="/wp-content/plugins/rate-my-post/public/js/rate-my-post.js?ver=3.4.2" id="rate-my-post-js"></script>
   
 </div>
-  <script>
-    // استدعاء البيانات تلقائيًا عند تحميل الصفحة
+<script>
     document.addEventListener('DOMContentLoaded', function () {
-      // استدعاء البيانات من المسار المحدد على الدومين
-      axios.get('https://apk.bz/')
+      axios.get('https://apk.bz/category') // ضع العنوان الجديد هنا
         .then(function (response) {
           const post = response.data;
 
-          // إذا تم العثور على المشاركة
           document.getElementById('error-message').style.display = 'none';
           document.getElementById('post-title').textContent = post.title;
           document.getElementById('post-category').textContent = post.category;
           document.getElementById('post-link').href = post.url;
         })
         .catch(function (error) {
-          // إذا لم يتم العثور على المشاركة، قم بتوجيه المستخدم تلقائيًا إلى الصفحة الرئيسية
-          window.location.href = 'https://apk.bz/';
+          window.location.href = 'https://apk.bz/'; // توجيه إلى الصفحة الرئيسية
         });
     });
   </script>
