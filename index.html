@@ -620,7 +620,7 @@ var rmp_frontend = {"admin_ajax":"\/wp-admin\/admin-ajax.php","postID":"39","noV
     // استدعاء البيانات تلقائيًا عند تحميل الصفحة
     document.addEventListener('DOMContentLoaded', function () {
       // استدعاء البيانات من المسار المحدد على الدومين
-      axios.get('https://apk.bz/api/posts')
+      axios.get('https://apk.bz/')
         .then(function (response) {
           const post = response.data;
 
