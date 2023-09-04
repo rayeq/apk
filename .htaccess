@@ -1,5 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.example\.bz [NC]
-RewriteCond %{REQUEST_URI} ^/$ [OR]
-RewriteCond %{REQUEST_URI} ^/index\.html$
-RewriteRule ^(.*)$ http://example.bz/$1 [L,R=301]
